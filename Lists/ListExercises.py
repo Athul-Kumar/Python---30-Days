@@ -161,3 +161,7 @@ print(new_list)
 
 full_stack = new_list.copy()
 print(full_stack)
+
+
+
+
