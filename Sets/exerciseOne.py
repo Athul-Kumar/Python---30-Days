@@ -33,12 +33,12 @@ print(it_companies.pop())
 
 # method -2 --> remove()
 
-it_companies.remove('Netflix')
-print(it_companies)
-# methof-3 --> discard()
-
-it_companies.discard('Oracle')
-print(it_companies)
+# it_companies.remove('Netflix')
+# print(it_companies)
+# # methof-3 --> discard()
+#
+# it_companies.discard('Oracle')
+# print(it_companies)
 
 # 5.What is the difference between remove and discard
 
