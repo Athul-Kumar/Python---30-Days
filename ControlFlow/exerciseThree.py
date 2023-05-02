@@ -2851,22 +2851,24 @@ countries_data = [
 
 lang_list = []
 for data in countries_data:
+    for lang in data["languages"]:
+        lang_list.append(lang)
 
-    for keys in data['languages']:
-
-        lang_list.append(keys)
 
 print(lang_list)
-print(len(lang_list))
-
+print("\n")
+print(f"The total number of languages: {len(lang_list)}")
 
 
 # pending
 # b.Find the ten most spoken languages from the data
 
+
+
+
+
+
 # Find the 10 most populated countries in the world
-
-
 
 
 
