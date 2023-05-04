@@ -134,6 +134,53 @@ def function_name(para = name):
 function_name() ---> default value will be used
 
 function_name(arg) ---> arg will be used
+
+*************************************************************************
+
+1.*ARGS --> Arbitrary Number of Arguments
+
+* If we do not know the number of arguments we pass to our function,
+we can create a function which can take arbitrary number of arguments by adding * before the parameter name.
+
+* Allow to pass multiple non-keyword arguments
+
+* args will be packed using *
+
+* args data type will be tuple
+
+Syntax
+
+# declaration
+
+def function_name(*args):
+    code
+    code
+    return value
+
+# calling the function
+
+print(function_name(para1, para2, para3,....))
+
+2.**KWARGS --> Allow to pass multiple keyword arguments
+
+* type of Kwargs --> dict
+* Kwargs will be packed using *
+
+
+syntax
+
+# declaring function
+
+def funct_name(**Kwargs):
+
+    code
+    code
+    return value
+
+# invoking the function
+
+print(funct_name(key="value", key2="value2", key3="value3")
+
 """
 
 
@@ -388,3 +435,106 @@ def user_age(birth_year = 1997, current_year = 2023):
 
 print(user_age())
 print(user_age(current_year=2023, birth_year=1990))
+
+
+# *ARGS examples
+
+# 1. printing name
+
+# normal case
+
+def name_fun(first_name, last_name):
+
+    full_name = first_name + " " + last_name
+
+    return full_name
+
+print(name_fun("Athul", "Kumar"))
+# print(name_fun("Athul", "kumar", "M U")) # here we can't pass third argument
+
+
+# *Args function
+
+def name_fun(*args):
+
+    for arg in args:
+        print(arg, end=" ")
+
+
+name_fun("Athul", "kumar", "M U")
+
+
+# another example --> sum of all numbers
+
+print("\n")
+def sum_all_nums(*args):
+
+    total =0
+    for arg in args:
+
+        total +=arg
+
+    return total
+
+
+print(sum_all_nums(1,2,3,4))
+print(sum_all_nums(1))
+print(sum_all_nums(1,2,3))
+
+# **KWARGS Function
+
+# normal keyword function
+
+def full_name(first_name, last_name):
+    full_name = first_name + " " + last_name
+
+    return full_name
+
+print(full_name(last_name="Kumar", first_name="Athul"))
+# print(full_name(last_name="Kumar", first_name="Athul", nick_name ="athul")) # error
+
+# **KWARGS
+
+def full_name(**kwargs):
+    print(type(kwargs)) #dict type
+
+    for value in kwargs.values():
+        print(value)
+
+full_name(first_name ="Athul",
+                middle_name="Kumar",
+                last_name="M U")
+
+#  exercise --> shipping label
+
+def shipping_label(*args, **kwargs):
+
+    for arg in args:
+        print(arg, end=" ")
+
+    print()
+
+    for value in kwargs.values():
+        print(value, end=" ")
+
+
+shipping_label("Dr.", "Spongebob", "Squarepants", "III",
+               street= "123 Fake",
+               apartment="100",
+               city="Detro",
+               state="kerala",
+               zip="54321")
+
+"""    Default with args"""
+
+
+def anime_info(odd, *args):
+    print(odd) # naruto default
+
+    for arg in args:
+        print(arg)  #rest
+
+
+
+anime_info("Naruto", "sasuke", "Itachi", "hidan", "Dedara")
+
