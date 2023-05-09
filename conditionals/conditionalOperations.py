@@ -84,6 +84,7 @@ if not condition:
     code
 """
 
+
 # example for if condition
 
 a = 3
@@ -210,7 +211,7 @@ else:
 
 number_of_students = 50
 
-if not number_of_students >= 50:
+if number_of_students < 50:
     print(" you can't go to tour")
 
 else:
