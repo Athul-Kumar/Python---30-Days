@@ -119,8 +119,6 @@ def reverse_list(list_item):
     reversed = []
     for items in list_item[::-1]:
         reversed.append(items)
-
-
     return reversed
 print(reverse_list(list_item = [1,2,3,4,5,6,7,8,9]))
 
@@ -162,3 +160,47 @@ print(remove_item(food_staff = ['Potato', 'Tomato', 'Mango', 'Milk'], item='Mang
 
 # 11.Declare a function named sum_of_numbers.
 # It takes a number parameter and it adds all the numbers in that range.
+
+def sum_of_numbers(num):
+
+    total = 0
+    for i in range(num + 1):
+        total += i
+    return total
+
+print(sum_of_numbers(num = 100))
+
+
+# 12.Declare a function named sum_of_odds.
+# It takes a number parameter and it adds all the odd numbers in that range.
+
+def sum_of_odds(num):
+    total = 0
+
+    for i in range(1, num + 1, 1):
+        if i % 2 != 0 :
+            total += i
+        else:
+            continue
+    return total
+
+
+print(sum_of_odds(num=25))
+
+
+# 13.Declare a function named sum_of_even.
+# It takes a number parameter and it adds all the even numbers in that - range.
+
+def sum_of_even(num):
+    total = 0
+
+    for i in range(num + 1):
+        if i % 2 == 0:
+            total += i
+        else:
+            continue
+
+    return total
+
+print(sum_of_even(num = 15))
+
