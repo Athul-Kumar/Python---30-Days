@@ -538,3 +538,7 @@ def anime_info(odd, *args):
 
 anime_info("Naruto", "sasuke", "Itachi", "hidan", "Dedara")
 
+
+"""
+PENDING --> Function as a Parameter of Another Function
+"""
